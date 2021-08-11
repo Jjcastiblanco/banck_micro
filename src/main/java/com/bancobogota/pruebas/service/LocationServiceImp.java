@@ -9,10 +9,10 @@ public interface LocationServiceImp {
 
     List<LocationEntity> getAll();
 
-    LocationEntity save (LocationEntity locationEntity);
+    LocationEntity save(LocationEntity locationEntity);
 
-    LocationEntity update (String name, int area_m2);
+    LocationEntity update(String name, int area_m2, int id);
 
-    List<LocationEntity> getById (int id);
+    List<LocationEntity> getById(int id);
 
 }

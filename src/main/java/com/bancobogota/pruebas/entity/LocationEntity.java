@@ -15,7 +15,7 @@ public class LocationEntity implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    private Integer id;
 
     @Column(name = "BD_NAME")
     private String name;
@@ -26,7 +26,7 @@ public class LocationEntity implements Serializable {
     public LocationEntity() {
     }
 
-    public LocationEntity(int id, String name, int area_m2) {
+    public LocationEntity(Integer id, String name, int area_m2) {
         this.id = id;
         this.name = name;
         this.area_m2 = area_m2;
