@@ -4,6 +4,7 @@ package com.bancobogota.pruebas.service;
 import com.bancobogota.pruebas.entity.LocationEntity;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface LocationServiceImp {
 
@@ -11,8 +12,6 @@ public interface LocationServiceImp {
 
     LocationEntity save(LocationEntity locationEntity);
 
-    LocationEntity update(String name, int area_m2, int id);
-
-    List<LocationEntity> getById(int id);
+    Optional<LocationEntity> getById(int id);
 
 }

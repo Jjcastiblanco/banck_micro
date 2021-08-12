@@ -3,9 +3,12 @@ package com.bancobogota.pruebas.service;
 import com.bancobogota.pruebas.entity.LocationEntity;
 import com.bancobogota.pruebas.repository.LocationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
+@Service
 public class LocationService implements LocationServiceImp {
 
     @Autowired
@@ -22,13 +25,8 @@ public class LocationService implements LocationServiceImp {
     }
 
     @Override
-    public LocationEntity update(String name, int area_m2, int id) {
-        return locationRepository.update(name,area_m2,id);
-    }
-
-    @Override
-    public List<LocationEntity> getById(int id) {
-        return locationRepository.getId(id);
+    public Optional<LocationEntity> getById(int id) {
+        return locationRepository.findById(id);
     }
 
 }
